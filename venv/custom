@@ -1,0 +1,46 @@
+{
+
+  "Monsters": {
+    "0": {
+      "Name": "Stegosaurus",
+      "Type": "Dinosaur",
+      "HP": "15.0",
+      "MP": "20",
+      "Def": "8",
+      "Sdef": "4",
+      "Atk": "10",
+      "Spatk": "2",
+      "Spd": "5",
+      "Moves": [
+        "Slash"
+      ]
+    }
+  },
+
+
+  "Heroes": {
+    "0": {
+      "Title": "Dragonborn ",
+      "Type": "Dragon",
+      "HP": "25.0",
+      "MP": "15",
+      "Def": "9",
+      "Sdef": "15",
+      "Atk": "10",
+      "Spatk": "13",
+      "Spd": "11",
+      "Moves": [
+        "Slash"
+      ]
+    }
+
+
+
+
+  }
+
+
+
+
+
+}
