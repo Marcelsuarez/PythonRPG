@@ -256,7 +256,7 @@ class Mfunc(object):
 
 
 herodict = {
-    # name, title, hp, mp, df, sdf, atk, spatk, spd, name, moves, type, title, boolean for title
+    # name, title, hp, mp, df, sdf, atk, spatk, spd, name, moves, type, boolean for title
     "Warrior":
         Hero(" the Warrior", 30.0, 10, 11, 11, 14, 2, 10, [movedict["Axe Breaker"], movedict["Battle Roar"] ] , "Warrior", False),
     "Vampire":
@@ -381,7 +381,7 @@ def randTarget(targets):
 #actual code
 
 try:    #check for custom json to load
-    with open('custom') as fp:
+    with open('custom.json') as fp:
         custom = json.load(fp)
         print("Json parsed!")
         json_appendor(custom, mdict)
@@ -390,11 +390,24 @@ except FileNotFoundError:
     print('Json not found')
 
 
-name = "Marc"
+classcheck = True
+name = input("Enter your name: ")
 
-#clas = input("Select your class:")
+while(classcheck):      #cant leave loop until valid class is selected
+    print('Current classes:')
+    classcheck = False
+    for value in herodict:
+        print(value)
+    clas = input("Select your class: ")
 
-heroes = [herodict["Dragon"]]
+    try:
+        heroes = [herodict[clas]]
+
+    except KeyError:
+        print("Please enter a valid class")
+        time.sleep(1)
+        classcheck = True
+
 
 hero = heroes[0]
 
